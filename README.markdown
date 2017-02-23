@@ -1,4 +1,4 @@
-# spf13-vim : Steve Francia's Vim Distribution
+# breaker's vimrc : Breaker's Vim Distribution
 
                     __ _ _____              _
          ___ _ __  / _/ |___ /      __   __(_)_ __ ___
@@ -7,7 +7,7 @@
         |___/ .__/|_| |_|____/        \_/  |_|_| |_| |_|
             |_|
 
-spf13-vim is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
+Breaker's vimrc is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
 
 It is a good starting point for anyone intending to use VIM for development running equally well on Windows, Linux, \*nix and Mac.
 
