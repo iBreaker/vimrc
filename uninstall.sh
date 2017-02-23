@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-app_dir="$HOME/.spf13-vim-3"
+app_dir="$HOME/.breaker-vim"
 
 warn() {
     echo "$1" >&2
@@ -14,5 +14,7 @@ die() {
 rm $HOME/.vimrc
 rm $HOME/.vimrc.bundles
 rm $HOME/.vim
+rm $HOME/.vimrc.before.local
+rm $HOME/.vimrc.bundles.local
 
 rm -rf $app_dir
