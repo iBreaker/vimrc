@@ -1051,6 +1051,7 @@
         " See `:echo g:airline_theme_map` for some more choices
         " Default in terminal vim is 'dark'
         if isdirectory(expand("~/.vim/bundle/vim-airline-themes/"))
+            let g:airline_powerline_fonts = 1
             if !exists('g:airline_theme')
                 let g:airline_theme = 'solarized'
             endif
@@ -1064,7 +1065,24 @@
 
 
 
-" }
+    " indexer {
+    if isdirectory(expand("~/.vim/bundle/indexer.tar.gz"))
+        let g:indexer_ctagsCommandLineOptions="--c++-kinds=+l+p+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
+        " 正向遍历同名标签
+        nmap <Leader>tn :tnext<CR>
+        " " 反向遍历同名标签
+        nmap <Leader>tp :tprevious<CR>"
+    endif
+    "}
+
+    " cpp-enhanced-higtlight {
+    if isdirectory(expand("~/.vim/bundle/vim-cpp-enhanced-highlight/"))
+        syntax keyword cppSTLtype initializer_list
+    endif 
+    "}
+
+
+    " }
 
 " GUI Settings {
 

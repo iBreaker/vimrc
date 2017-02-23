@@ -166,6 +166,16 @@
         endif
     " }
 
+    " C/C++{
+    if  count(g:spf13_bundle_groups, "c/cpp")
+        Bundle 'octol/vim-cpp-enhanced-highlight'
+        Plugin 'vim-scripts/indexer.tar.gz'
+        Plugin 'vim-scripts/DfrankUtil'
+        Plugin 'vim-scripts/vimprj'
+    endif
+    " }
+
+    "
     " Snippets & AutoComplete {
         if count(g:spf13_bundle_groups, 'snipmate')
             Bundle 'garbas/vim-snipmate'
@@ -282,18 +292,19 @@
     " }
 
     " Misc {
-        if count(g:spf13_bundle_groups, 'misc')
-            Bundle 'rust-lang/rust.vim'
-            Bundle 'tpope/vim-markdown'
-            Bundle 'spf13/vim-preview'
-            Bundle 'tpope/vim-cucumber'
-            Bundle 'cespare/vim-toml'
-            Bundle 'quentindecock/vim-cucumber-align-pipes'
-            Bundle 'saltstack/salt-vim'
-        endif
+    if count(g:spf13_bundle_groups, 'misc')
+        Bundle 'rust-lang/rust.vim'
+        Bundle 'tpope/vim-markdown'
+        Bundle 'spf13/vim-preview'
+        Bundle 'tpope/vim-cucumber'
+        Bundle 'cespare/vim-toml'
+        Bundle 'quentindecock/vim-cucumber-align-pipes'
+        Bundle 'saltstack/salt-vim'
+        Bundle 'wsdjeg/vim-chat'
+    endif
     " }
 
-    endif
+endif
 
 " }
 
