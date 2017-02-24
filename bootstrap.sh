@@ -81,18 +81,25 @@ lnif() {
 }
 
 ############################ SETUP FUNCTIONS
-
 do_backup() {
-    if [ -e "$1" ] || [ -e "$2" ] || [ -e "$3" ]; then
-        msg "Attempting to back up your original vim configuration."
-        today=`date +%Y%m%d_%s`
-        for i in "$1" "$2" "$3"; do
-            [ -e "$i" ] && [ ! -L "$i" ] && mv -v "$i" "$i.$today";
-        done
-        ret="$?"
-        success "Your original vim configuration has been backed up."
-        debug
-   fi
+    for arg in $@
+    do
+        if
+            [ -e "$1"/.breaker-vim-installed ]; then
+            continue
+        fi
+
+        if [ -e $arg ]; then
+            msg "Attempting to back up your original vim configuration."
+            today=`date +%Y%m%d_%s`
+            for i in $arg; do
+                [ -e "$i" ] && [ ! -L "$i" ] && mv -v "$i" "$i.$today";
+            done
+            ret="$?"
+            success "Your original vim configuration has been backed up."
+            debug
+        fi
+    done
 }
 
 sync_repo() {
@@ -133,6 +140,7 @@ create_symlinks() {
     fi
 
     touch  "$target_path/.vimrc.local"
+    touch  "$source_path/.breaker-vim-installed"
 
     ret="$?"
     success "Setting up vim symlinks."
