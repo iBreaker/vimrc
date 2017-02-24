@@ -300,9 +300,14 @@
         Bundle 'cespare/vim-toml'
         Bundle 'quentindecock/vim-cucumber-align-pipes'
         Bundle 'saltstack/salt-vim'
-        Bundle 'wsdjeg/vim-chat'
     endif
     " }
+    
+    " vim-chat{
+         
+    if count(g:spf13_bundle_groups, "chat")
+        Bundle 'vim-chat/vim-chat'
+    "}
 
 endif
 
