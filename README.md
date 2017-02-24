@@ -33,7 +33,7 @@ The easiest way to install spf13-vim is to use our [automatic installer](https:/
 
 ```bash
 
-    curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L > spf13-vim.sh && sh spf13-vim.sh
+    curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L > breaker-vim.sh && sh breaker-vim.sh
 ```
 
 If you have a bash-compatible shell you can run the script directly:
