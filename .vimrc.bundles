@@ -307,6 +307,7 @@
          
     if count(g:spf13_bundle_groups, "chat")
         Bundle 'vim-chat/vim-chat'
+    endif
     "}
 
 endif
