@@ -1,11 +1,23 @@
 # breaker's vimrc : Breaker's Vim Distribution
 
-                    __ _ _____              _
-         ___ _ __  / _/ |___ /      __   __(_)_ __ ___
-        / __| '_ \| |_| | |_ \ _____\ \ / /| | '_ ` _ \
-        \__ \ |_) |  _| |___) |_____|\ V / | | | | | | |
-        |___/ .__/|_| |_|____/        \_/  |_|_| |_| |_|
-            |_|
+                   _-.                       .-_
+                 _..-'(                       )`-.._
+              ./'. '||\\.       (\_/)       .//||` .`\.
+           ./'.|'.'||||\\|..    )*.*(    ..|//||||`.`|.`\.
+        ./'..|'.|| |||||\```````  "  '''''''/||||| ||.`|..`\.
+      ./'.||'.|||| ||||||||||||.     .|||||||||||| ||||.`||.`\.
+     /'|||'.|||||| ||||||||||||{     }|||||||||||| ||||||.`|||`\
+    '.|||'.||||||| ||||||||||||{     }|||||||||||| |||||||.`|||.`
+   '.||| ||||||||| |/'   ``\||/`     '\||/''   `\| ||||||||| |||.`
+   |/' \./'     `\./          |/\   /\|          \./'     `\./ `\|
+   V    V         V          }' `\ /' `{          V         V    V
+   `    `         `               U               '         '
+ ___
+(  _`\                    ( )
+| (_) ) _ __   __     _ _ | |/')    __   _ __  ______  _   _ (_)  ___ ___
+|  _ <'( '__)/'__`\ /'_` )| , <   /'__`\( '__)(______)( ) ( )| |/' _ ` _ `\
+| (_) )| |  (  ___/( (_| || |\`\ (  ___/| |           | \_/ || || ( ) ( ) |
+(____/'(_)  `\____)`\__,_)(_) (_)`\____)(_)           `\___/'(_)(_) (_) (_)
 
 Breaker's vimrc is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
 
@@ -15,7 +27,7 @@ The distribution is completely customisable using a `~/.vimrc.local`, `~/.vimrc.
 
 ![spf13-vim image][spf13-vim-img]
 
-Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, spf13-vim 3 uses the [Vundle] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vundle also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
+Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, Breaker-vim uses the [Vundle] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vundle also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
 
 Great care has been taken to ensure that each plugin plays nicely with others, and optional configuration has been provided for what we believe is the most efficient use.
 
@@ -27,7 +39,7 @@ To make all the plugins work, specifically [neocomplete](https://github.com/Shou
 
 ## Linux, \*nix, Mac OSX Installation
 
-The easiest way to install spf13-vim is to use our [automatic installer](https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh) by simply copying and pasting the following line into a terminal. This will install spf13-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
+The easiest way to install Breaker-vim is to use our [automatic installer](https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh) by simply copying and pasting the following line into a terminal. This will install Breaker-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
 
 *Requires Git 1.7+ and Vim 7.3+*
 
@@ -45,19 +57,19 @@ If you have a bash-compatible shell you can run the script directly:
 ## Installing on Windows
 
 On Windows and \*nix [Git] and [Curl] are required. Also, if you haven't done so already, you'll need to install [Vim].
-The quickest option to install all three dependencies ([Git], [Curl], [Vim] and [spf13-vim]) is via [Chocolatey] NuGet. After installing [Chocolatey], execute the following commands on the _command prompt_:
+The quickest option to install all three dependencies ([Git], [Curl], [Vim] and [Breaker]) is via [Chocolatey] NuGet. After installing [Chocolatey], execute the following commands on the _command prompt_:
 
-    C:\> choco install spf13-vim
+    C:\> choco install Breaker-vim
 
-_Note: The [spf13-vim package] will install Vim also!_
+_Note: The [Breaker-vim package] will install Vim also!_
 
-If you want to install [msysgit], [Curl] and [spf13-vim] individually, follow the directions below.
+If you want to install [msysgit], [Curl] and [Breaker-vim] individually, follow the directions below.
 
 ### Installing dependencies
 
 #### Install [Vim]
 
-After the installation of Vim you must add a new directory to your environment variables path to make it work with the script installation of spf13.
+After the installation of Vim you must add a new directory to your environment variables path to make it work with the script installation of Breaker.
 
 Open Vim and write the following command, it will show the installed directory:
 
@@ -103,30 +115,30 @@ to verify all good, run:
     Features: Largefile NTLM SSL SSPI libz
 
 
-#### Installing spf13-vim on Windows
+#### Installing Breaekr-vim on Windows
 
-The easiest way is to download and run the spf13-vim-windows-install.cmd file. Remember to run this file in **Administrator Mode** if you want the symlinks to be created successfully.
+The easiest way is to download and run the Breaker-vim-windows-install.cmd file. Remember to run this file in **Administrator Mode** if you want the symlinks to be created successfully.
 
 ## Updating to the latest version
 The simpliest (and safest) way to update is to simply rerun the installer. It will completely and non destructively upgrade to the latest version.
 
 ```bash
 
-    curl https://raw.githubusercontent.com/ibreaker/spf13-vim/3.0/bootstrap.sh -L -o - | sh
+    curl https://raw.githubusercontent.com/ibreaker/vimrc/master/bootstrap.sh -L -o - | sh
 
 ```
 
 Alternatively you can manually perform the following steps. If anything has changed with the structure of the configuration you will need to create the appropriate symlinks.
 
 ```bash
-    cd $HOME/to/spf13-vim/
+    cd $HOME/to/breaker-vim/
     git pull
     vim +BundleInstall! +BundleClean +q
 ```
 
 ### Fork me on GitHub
 
-I'm always happy to take pull requests from others. A good number of people are already [contributors] to [spf13-vim]. Go ahead and fork me.
+I'm always happy to take pull requests from others. A good number of people are already [contributors] to [Breaker-vim]. Go ahead and fork me.
 
 # A highly optimized .vimrc config file
 
@@ -163,7 +175,7 @@ For example, to override the default color schemes:
 ### Before File
 
 Create a `~/.vimrc.before.local` file to define any customizations
-that get loaded *before* the spf13-vim `.vimrc`.
+that get loaded *before* the breaker-vim `.vimrc`.
 
 For example, to prevent autocd into a file directory:
 ```bash
@@ -175,16 +187,16 @@ For a list of available spf13-vim specific customization options, look at the `~
 ### Fork Customization
 
 There is an additional tier of customization available to those who want to maintain a
-fork of spf13-vim specialized for a particular group. These users can create `.vimrc.fork`
+fork of Breaker-vim specialized for a particular group. These users can create `.vimrc.fork`
 and `.vimrc.bundles.fork` files in the root of their fork.  The load order for the configuration is:
 
-1. `.vimrc.before` - spf13-vim before configuration
+1. `.vimrc.before` - Breaker-vim before configuration
 2. `.vimrc.before.fork` - fork before configuration
 3. `.vimrc.before.local` - before user configuration
-4. `.vimrc.bundles` - spf13-vim bundle configuration
+4. `.vimrc.bundles` - Breaker-vim bundle configuration
 5. `.vimrc.bundles.fork` - fork bundle configuration
 6. `.vimrc.bundles.local` - local user bundle configuration
-6. `.vimrc` - spf13-vim vim configuration
+6. `.vimrc` - Breaker-vim vim configuration
 7. `.vimrc.fork` - fork vim configuration
 8. `.vimrc.local` - local user configuration
 
@@ -202,7 +214,7 @@ Once you have this file in your repo, only the bundles you specified will be ins
 You may also want to update your `README.markdown` file so that the `bootstrap.sh` link points to your repository and your `bootstrap.sh`
 file to pull down your fork.
 
-For an example of a fork of spf13-vim that provides customization in this manner see [taxilian's fork](https://github.com/taxilian/spf13-vim).
+For an example of a fork of Breaker-vim that provides customization in this manner see [taxilian's fork](https://github.com/taxilian/spf13-vim).
 
 ### Easily Editing Your Configuration
 
@@ -219,7 +231,7 @@ let g:spf13_apply_config_mapping='<Leader>sv'
 
 # Plugins
 
-spf13-vim contains a curated set of popular vim plugins, colors, snippets and syntaxes. Great care has been made to ensure that these plugins play well together and have optimal configuration.
+Breaker-vim contains a curated set of popular vim plugins, colors, snippets and syntaxes. Great care has been made to ensure that these plugins play well together and have optimal configuration.
 
 ## Adding new plugins
 
@@ -461,7 +473,7 @@ To enable powerline symbols first install one of the [Powerline Fonts] or patch 
 
 ## Additional Syntaxes
 
-spf13-vim ships with a few additional syntaxes:
+Breaker-vim ships with a few additional syntaxes:
 
 * Markdown (bound to \*.markdown, \*.md, and \*.mk)
 * Twig
@@ -469,7 +481,7 @@ spf13-vim ships with a few additional syntaxes:
 
 ## Amazing Colors
 
-spf13-vim includes [solarized] and [spf13 vim color pack](https://github.com/spf13/vim-colors/):
+Breaker-vim includes [solarized] and [spf13 vim color pack](https://github.com/spf13/vim-colors/):
 
 * ir_black
 * molokai
@@ -515,7 +527,7 @@ Here's some tips if you've never used VIM before:
 
 * Use `:q` to exit vim
 * Certain commands are prefixed with a `<Leader>` key, which by default maps to `\`.
-  Spf13-vim uses `let mapleader = ","` to change this to `,` which is in a consistent and
+  Breaker-vim uses `let mapleader = ","` to change this to `,` which is in a consistent and
   convenient location.
 * Keyboard [cheat sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif).
 
