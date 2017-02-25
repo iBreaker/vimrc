@@ -1,5 +1,5 @@
 # breaker's vimrc : Breaker's Vim Distribution
-
+<pre>
                    _-.                       .-_
                  _..-'(                       )`-.._
               ./'. '||\\.       (\_/)       .//||` .`\.
@@ -18,6 +18,8 @@
 |  _ <'( '__)/'__`\ /'_` )| , <   /'__`\( '__)(______)( ) ( )| |/' _ ` _ `\
 | (_) )| |  (  ___/( (_| || |\`\ (  ___/| |           | \_/ || || ( ) ( ) |
 (____/'(_)  `\____)`\__,_)(_) (_)`\____)(_)           `\___/'(_)(_) (_) (_)
+
+</pre>
 
 Breaker's vimrc is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
 
