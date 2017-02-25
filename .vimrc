@@ -24,7 +24,7 @@
 "   While much of it is beneficial for general use, I would
 "   recommend picking out the parts you want and understand.
 "
-"   You can find me at http://0x7c00.com
+"   You can find me at http://0x7c00.cn
 "
 "   Copyright 2017 Breaker
 "
