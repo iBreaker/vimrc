@@ -1,4 +1,4 @@
-# breaker's vimrc : Breaker's Vim Distribution
+# breaker vimrc : Breaker Vim Distribution
 <pre>
                    _-.                       .-_
                  _..-'(                       )`-.._
