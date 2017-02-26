@@ -42,54 +42,54 @@
 " }
 
 
-" spf13 options {
+" Breaker options {
 
     " Prevent automatically changing to open file directory
-    "   let g:spf13_no_autochdir = 1
+    "   let g:breaker_no_autochdir = 1
 
     " Disable views
-    "   let g:spf13_no_views = 1
+    "   let g:breaker_no_views = 1
 
     " Leader keys
-    "   let g:spf13_leader='\'
-    "   let g:spf13_localleader='_'
+    "   let g:breaker_leader='\'
+    "   let g:breaker_localleader='_'
 
     " Disable easier moving in tabs and windows
-    "   let g:spf13_no_easyWindows = 1
+    "   let g:breaker_no_easyWindows = 1
 
     " Disable wrap relative motion for start/end line motions
-    "   let g:spf13_no_wrapRelMotion = 1
+    "   let g:breaker_no_wrapRelMotion = 1
 
     " Disable fast tab navigation
-    "   let g:spf13_no_fastTabs = 1
+    "   let g:breaker_no_fastTabs = 1
 
     " Clear search highlighting
-    "   let g:spf13_clear_search_highlight = 1
+    "   let g:breaker_clear_search_highlight = 1
 
     " Disable neosnippet expansion
     " This maps over <C-k> and does some Supertab
     " emulation with snippets
-    "   let g:spf13_no_neosnippet_expand = 1
+    "   let g:breaker_no_neosnippet_expand = 1
 
     " Disable whitespace stripping
-    "   let g:spf13_keep_trailing_whitespace = 1
+    "   let g:breaker_keep_trailing_whitespace = 1
 
     " Enable powerline symbols
     "   let g:airline_powerline_fonts = 1
 
     " vim files directory
-    "   let g:spf13_consolidated_directory = <full path to desired directory>
-    "   eg: let g:spf13_consolidated_directory = $HOME . '/.vim/'
+    "   let g:breaker_consolidated_directory = <full path to desired directory>
+    "   eg: let g:breaker_consolidated_directory = $HOME . '/.vim/'
 
     " This makes the completion popup strictly passive.
     " Keypresses acts normally. <ESC> takes you of insert mode, words don't
     " automatically complete, pressing <CR> inserts a newline, etc. Iff the
     " menu is open, tab will cycle through it. If a snippet is selected, <C-k>
     " expands it and jumps between fields.
-    "   let g:spf13_noninvasive_completion = 1
+    "   let g:breaker_noninvasive_completion = 1
 
     " Don't turn conceallevel or concealcursor
-    "   let g:spf13_no_conceal = 1
+    "   let g:breaker_no_conceal = 1
 
     " For some colorschemes, autocolor will not work (eg: 'desert', 'ir_black')
     " Indent guides will attempt to set your colors smartly. If you
@@ -100,10 +100,10 @@
 
     " Leave the default font and size in GVim
     " To set your own font, do it from ~/.vimrc.local
-    "   let g:spf13_no_big_font = 1
+    "   let g:breaker_no_big_font = 1
 
     " Disable  omni complete
-    "   let g:spf13_no_omni_complete = 1
+    "   let g:breaker_no_omni_complete = 1
 
     " Don't create default mappings for multicursors
     " See :help multiple-cursors-mappings
@@ -115,10 +115,10 @@
     " Require a special keypress to enter multiple cursors mode
     "   let g:multi_cursor_start_key='+'
 
-    " Mappings for editing/applying spf13 config
-    "   let g:spf13_edit_config_mapping='<leader>ev'
-    "   let g:spf13_apply_config_mapping='<leader>sv'
-    
+    " Mappings for editing/applying Breaker config
+    "   let g:breaker_edit_config_mapping='<leader>ev'
+    "   let g:breaker_apply_config_mapping='<leader>sv'
+
 " }
 
 " Use fork before if available {

@@ -69,9 +69,8 @@
           set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
         endif
     " }
-    
+
     " Arrow Key Fix {
-        " https://github.com/spf13/spf13-vim/issues/780
         if &term[:4] == "xterm" || &term[:5] == 'screen' || &term[:3] == 'rxvt'
             inoremap <silent> <C-[>OC <RIGHT>
         endif
@@ -134,8 +133,8 @@
     " Most prefer to automatically switch to the current file directory when
     " a new buffer is opened; to prevent this behavior, add the following to
     " your .vimrc.before.local file:
-    "   let g:spf13_no_autochdir = 1
-    if !exists('g:spf13_no_autochdir')
+    let g:breaker_no_autochdir = 1
+    if !exists('g:breaker_no_autochdir')
         autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
         " Always switch to the current file directory
     endif
@@ -158,8 +157,8 @@
     " http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
     " Restore cursor to file position in previous editing session
     " To disable this, add the following to your .vimrc.before.local file:
-    "   let g:spf13_no_restore_cursor = 1
-    if !exists('g:spf13_no_restore_cursor')
+    "   let g:breaker_no_restore_cursor = 1
+    if !exists('g:breaker_no_restore_cursor')
         function! ResCur()
             if line("'\"") <= line("$")
                 silent! normal! g`"
@@ -182,8 +181,8 @@
         endif
 
         " To disable views add the following to your .vimrc.before.local file:
-        "   let g:spf13_no_views = 1
-        if !exists('g:spf13_no_views')
+        "   let g:breaker_no_views = 1
+        if !exists('g:breaker_no_views')
             " Add exclusions to mkview and loadview
             " eg: *.*, svn-commit.tmp
             let g:skipview_files = [
@@ -196,7 +195,7 @@
 
 " Vim UI {
 
-    if !exists('g:override_spf13_bundles') && filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
+    if !exists('g:override_breaker_bundles') && filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
         let g:solarized_termcolors=256
         let g:solarized_termtrans=1
         let g:solarized_contrast="normal"
@@ -226,7 +225,7 @@
         " Broken down into easily includeable segments
         set statusline=%<%f\                     " Filename
         set statusline+=%w%h%m%r                 " Options
-        if !exists('g:override_spf13_bundles')
+        if !exists('g:override_breaker_bundles')
             set statusline+=%{fugitive#statusline()} " Git Hotness
         endif
         set statusline+=\ [%{&ff}/%Y]            " Filetype
@@ -271,8 +270,10 @@
     " Remove trailing whitespaces and ^M chars
     " To disable the stripping of whitespace, add the following to your
     " .vimrc.before.local file:
-    "   let g:spf13_keep_trailing_whitespace = 1
-    autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif
+    "   let g:breaker_keep_trailing_whitespace = 1
+    autocmd FileType
+    autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql
+    autocmd BufWritePre <buffer> if !exists('g:breaker_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif
     "autocmd FileType go autocmd BufWritePre <buffer> Fmt
     autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
     autocmd FileType haskell,puppet,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
@@ -292,41 +293,41 @@
     " The default leader is '\', but many people prefer ',' as it's in a standard
     " location. To override this behavior and set it back to '\' (or any other
     " character) add the following to your .vimrc.before.local file:
-    "   let g:spf13_leader='\'
-    if !exists('g:spf13_leader')
+    "   let g:breaker_leader='\'
+    if !exists('g:breaker_leader')
         let mapleader = ';'
     else
-        let mapleader=g:spf13_leader
+        let mapleader=g:breaker_leader
     endif
-    if !exists('g:spf13_localleader')
+    if !exists('g:breaker_localleader')
         let maplocalleader = '_'
     else
-        let maplocalleader=g:spf13_localleader
+        let maplocalleader=g:breaker_localleader
     endif
 
     noremap <leader>bg :call ToggleBG()<CR>
-    " The default mappings for editing and applying the spf13 configuration
+    " The default mappings for editing and applying the breaker configuration
     " are <leader>ev and <leader>sv respectively. Change them to your preference
     " by adding the following to your .vimrc.before.local file:
-    "   let g:spf13_edit_config_mapping='<leader>ec'
-    "   let g:spf13_apply_config_mapping='<leader>sc'
-    if !exists('g:spf13_edit_config_mapping')
-        let s:spf13_edit_config_mapping = '<leader>ev'
+    "   let g:breaker_edit_config_mapping='<leader>ec'
+    "   let g:breaker_apply_config_mapping='<leader>sc'
+    if !exists('g:breaker_edit_config_mapping')
+        let s:breaker_edit_config_mapping = '<leader>ev'
     else
-        let s:spf13_edit_config_mapping = g:spf13_edit_config_mapping
+        let s:breaker_edit_config_mapping = g:breaker_edit_config_mapping
     endif
-    if !exists('g:spf13_apply_config_mapping')
-        let s:spf13_apply_config_mapping = '<leader>sv'
+    if !exists('g:breaker_apply_config_mapping')
+        let s:breaker_apply_config_mapping = '<leader>sv'
     else
-        let s:spf13_apply_config_mapping = g:spf13_apply_config_mapping
+        let s:breaker_apply_config_mapping = g:breaker_apply_config_mapping
     endif
 
     " Easier moving in tabs and windows
     " The lines conflict with the default digraph mapping of <C-K>
     " If you prefer that functionality, add the following to your
     " .vimrc.before.local file:
-    "   let g:spf13_no_easyWindows = 1
-    if !exists('g:spf13_no_easyWindows')
+    "   let g:breaker_no_easyWindows = 1
+    if !exists('g:breaker_no_easyWindows')
         map <C-J> <C-W>j<C-W>_
         map <C-K> <C-W>k<C-W>_
         map <C-L> <C-W>l<C-W>_
@@ -342,8 +343,8 @@
     " Default vim behaviour is to act relative to text line in both cases
     " If you prefer the default behaviour, add the following to your
     " .vimrc.before.local file:
-    "   let g:spf13_no_wrapRelMotion = 1
-    if !exists('g:spf13_no_wrapRelMotion')
+    "   let g:breaker_no_wrapRelMotion = 1
+    if !exists('g:breaker_no_wrapRelMotion')
         " Same for 0, home, end, etc
         function! WrapRelativeMotion(key, ...)
             let vis_sel=""
@@ -380,14 +381,14 @@
     " bottom of the screen
     " If you prefer that functionality, add the following to your
     " .vimrc.before.local file:
-    "   let g:spf13_no_fastTabs = 1
-    if !exists('g:spf13_no_fastTabs')
+    "   let g:breaker_no_fastTabs = 1
+    if !exists('g:breaker_no_fastTabs')
         map <S-H> gT
         map <S-L> gt
     endif
 
     " Stupid shift key fixes
-    if !exists('g:spf13_no_keyfixes')
+    if !exists('g:breaker_no_keyfixes')
         if has("user_commands")
             command! -bang -nargs=* -complete=file E e<bang> <args>
             command! -bang -nargs=* -complete=file W w<bang> <args>
@@ -421,8 +422,8 @@
     " Most prefer to toggle search highlighting rather than clear the current
     " search results. To clear search highlighting rather than toggle it on
     " and off, add the following to your .vimrc.before.local file:
-    "   let g:spf13_clear_search_highlight = 1
-    if exists('g:spf13_clear_search_highlight')
+    "   let g:breaker_clear_search_highlight = 1
+    if exists('g:breaker_clear_search_highlight')
         nmap <silent> <leader>/ :nohlsearch<CR>
     else
         nmap <silent> <leader>/ :set invhlsearch<CR>
@@ -479,7 +480,7 @@
 " Plugins {
 
     " GoLang {
-        if count(g:spf13_bundle_groups, 'go')
+        if count(g:breaker_bundle_groups, 'go')
             let g:go_highlight_functions = 1
             let g:go_highlight_methods = 1
             let g:go_highlight_structs = 1
@@ -502,7 +503,7 @@
 
 
     " TextObj Sentence {
-        if count(g:spf13_bundle_groups, 'writing')
+        if count(g:breaker_bundle_groups, 'writing')
             augroup textobj_sentence
               autocmd!
               autocmd FileType markdown call textobj#sentence#init()
@@ -513,7 +514,7 @@
     " }
 
     " TextObj Quote {
-        if count(g:spf13_bundle_groups, 'writing')
+        if count(g:breaker_bundle_groups, 'writing')
             augroup textobj_quote
                 autocmd!
                 autocmd FileType markdown call textobj#quote#init()
@@ -541,8 +542,8 @@
 
     " OmniComplete {
         " To disable omni complete, add the following to your .vimrc.before.local file:
-        "   let g:spf13_no_omni_complete = 1
-        if !exists('g:spf13_no_omni_complete')
+        "   let g:breaker_no_omni_complete = 1
+        if !exists('g:breaker_no_omni_complete')
             if has("autocmd") && exists("+omnifunc")
                 autocmd Filetype *
                     \if &omnifunc == "" |
@@ -556,7 +557,7 @@
 
             " Some convenient mappings
             "inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
-            if exists('g:spf13_map_cr_omni_complete')
+            if exists('g:breaker_map_cr_omni_complete')
                 inoremap <expr> <CR>     pumvisible() ? "\<C-y>" : "\<CR>"
             endif
             inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
@@ -730,7 +731,7 @@
     "}
 
     " YouCompleteMe {
-        if count(g:spf13_bundle_groups, 'youcompleteme')
+        if count(g:breaker_bundle_groups, 'youcompleteme')
             let g:acp_enableAtStartup = 0
 
             " enable completion from tags
@@ -758,7 +759,7 @@
             endif
 
             " For snippet_complete marker.
-            if !exists("g:spf13_no_conceal")
+            if !exists("g:breaker_no_conceal")
                 if has('conceal')
                     set conceallevel=2 concealcursor=i
                 endif
@@ -772,7 +773,7 @@
     " }
 
     " neocomplete {
-        if count(g:spf13_bundle_groups, 'neocomplete')
+        if count(g:breaker_bundle_groups, 'neocomplete')
             let g:acp_enableAtStartup = 0
             let g:neocomplete#enable_at_startup = 1
             let g:neocomplete#enable_smart_case = 1
@@ -796,11 +797,11 @@
 
             " Plugin key-mappings {
                 " These two lines conflict with the default digraph mapping of <C-K>
-                if !exists('g:spf13_no_neosnippet_expand')
+                if !exists('g:breaker_no_neosnippet_expand')
                     imap <C-k> <Plug>(neosnippet_expand_or_jump)
                     smap <C-k> <Plug>(neosnippet_expand_or_jump)
                 endif
-                if exists('g:spf13_noninvasive_completion')
+                if exists('g:breaker_noninvasive_completion')
                     inoremap <CR> <CR>
                     " <ESC> takes you out of insert mode
                     inoremap <expr> <Esc>   pumvisible() ? "\<C-y>\<Esc>" : "\<Esc>"
@@ -886,7 +887,7 @@
             let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
     " }
     " neocomplcache {
-        elseif count(g:spf13_bundle_groups, 'neocomplcache')
+        elseif count(g:breaker_bundle_groups, 'neocomplcache')
             let g:acp_enableAtStartup = 0
             let g:neocomplcache_enable_at_startup = 1
             let g:neocomplcache_enable_camel_case_completion = 1
@@ -913,7 +914,7 @@
                 " These two lines conflict with the default digraph mapping of <C-K>
                 imap <C-k> <Plug>(neosnippet_expand_or_jump)
                 smap <C-k> <Plug>(neosnippet_expand_or_jump)
-                if exists('g:spf13_noninvasive_completion')
+                if exists('g:breaker_noninvasive_completion')
                     inoremap <CR> <CR>
                     " <ESC> takes you out of insert mode
                     inoremap <expr> <Esc>   pumvisible() ? "\<C-y>\<Esc>" : "\<Esc>"
@@ -987,8 +988,8 @@
     " }
     " Normal Vim omni-completion {
     " To disable omni complete, add the following to your .vimrc.before.local file:
-    "   let g:spf13_no_omni_complete = 1
-        elseif !exists('g:spf13_no_omni_complete')
+    "   let g:breaker_no_omni_complete = 1
+        elseif !exists('g:breaker_no_omni_complete')
             " Enable omni-completion.
             autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
             autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -1002,8 +1003,8 @@
     " }
 
     " Snippets {
-        if count(g:spf13_bundle_groups, 'neocomplcache') ||
-                    \ count(g:spf13_bundle_groups, 'neocomplete')
+        if count(g:breaker_bundle_groups, 'neocomplcache') ||
+                    \ count(g:breaker_bundle_groups, 'neocomplete')
 
             " Use honza's snippets.
             let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
@@ -1012,7 +1013,7 @@
             let g:neosnippet#enable_snipmate_compatibility = 1
 
             " For snippet_complete marker.
-            if !exists("g:spf13_no_conceal")
+            if !exists("g:breaker_no_conceal")
                 if has('conceal')
                     set conceallevel=2 concealcursor=i
                 endif
@@ -1098,7 +1099,7 @@
     " cpp-enhanced-higtlight {
     if isdirectory(expand("~/.vim/bundle/vim-cpp-enhanced-highlight/"))
         syntax keyword cppSTLtype initializer_list
-    endif 
+    endif
     "}
 
 
@@ -1110,7 +1111,7 @@
     if has('gui_running')
         set guioptions-=T           " Remove the toolbar
         set lines=40                " 40 lines of text instead of 24
-        if !exists("g:spf13_no_big_font")
+        if !exists("g:breaker_no_big_font")
             if LINUX() && has("gui_running")
                 set guifont=Andale\ Mono\ Regular\ 12,Menlo\ Regular\ 11,Consolas\ Regular\ 12,Courier\ New\ Regular\ 14
             elseif OSX() && has("gui_running")
@@ -1146,10 +1147,10 @@
         " To specify a different directory in which to place the vimbackup,
         " vimviews, vimundo, and vimswap files/directories, add the following to
         " your .vimrc.before.local file:
-        "   let g:spf13_consolidated_directory = <full path to desired directory>
-        "   eg: let g:spf13_consolidated_directory = $HOME . '/.vim/'
-        if exists('g:spf13_consolidated_directory')
-            let common_dir = g:spf13_consolidated_directory . prefix
+        "   let g:breaker_consolidated_directory = <full path to desired directory>
+        "   eg: let g:breaker_consolidated_directory = $HOME . '/.vim/'
+        if exists('g:breaker_consolidated_directory')
+            let common_dir = g:breaker_consolidated_directory . prefix
         else
             let common_dir = parent . '/.' . prefix
         endif
@@ -1224,7 +1225,7 @@
     " e.g. Grep current file for <search_term>: Shell grep -Hn <search_term> %
     " }
 
-    function! s:IsSpf13Fork()
+    function! s:IsBreakerFork()
         let s:is_fork = 0
         let s:fork_files = ["~/.vimrc.fork", "~/.vimrc.before.fork", "~/.vimrc.bundles.fork"]
         for fork_file in s:fork_files
@@ -1235,24 +1236,24 @@
         endfor
         return s:is_fork
     endfunction
-     
+
     function! s:ExpandFilenameAndExecute(command, file)
         execute a:command . " " . expand(a:file, ":p")
     endfunction
-     
-    function! s:EditSpf13Config()
+
+    function! s:EditBreakerConfig()
         call <SID>ExpandFilenameAndExecute("tabedit", "~/.vimrc")
         call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.before")
         call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.bundles")
-     
+
         execute bufwinnr(".vimrc") . "wincmd w"
         call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.local")
         wincmd l
         call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.local")
         wincmd l
         call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.local")
-     
-        if <SID>IsSpf13Fork()
+
+        if <SID>IsBreakerFork()
             execute bufwinnr(".vimrc") . "wincmd w"
             call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.fork")
             wincmd l
@@ -1260,12 +1261,12 @@
             wincmd l
             call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.fork")
         endif
-     
+
         execute bufwinnr(".vimrc.local") . "wincmd w"
     endfunction
-     
-    execute "noremap " . s:spf13_edit_config_mapping " :call <SID>EditSpf13Config()<CR>"
-    execute "noremap " . s:spf13_apply_config_mapping . " :source ~/.vimrc<CR>"
+
+    execute "noremap " . s:breaker_edit_config_mapping " :call <SID>EditBreakerConfig()<CR>"
+    execute "noremap " . s:breaker_apply_config_mapping . " :source ~/.vimrc<CR>"
 " }
 
 " Use fork vimrc if available {
