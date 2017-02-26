@@ -324,7 +324,7 @@ There's a lot more, check it out at `:help surround`
 ## [NERDCommenter]
 
 NERDCommenter allows you to wrangle your code comments, regardless of
-filetype. View `help :NERDCommenter` or checkout my post on [NERDCommenter](http://spf13.com/post/vim-plugins-nerd-commenter).
+filetype. View `help :NERDCommenter` or checkout my post on ![NERDCommenter][NERD-Tree].
 
 **QuickStart** Toggle comments using `<Leader>c<space>` in Visual or Normal mode.
 
@@ -532,8 +532,6 @@ Here's some tips if you've never used VIM before:
   convenient location.
 * Keyboard [cheat sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-7131036-5/spf13-vim/readme)](https://github.com/igrigorik/ga-beacon)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/spf13/spf13-vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 [Git]:http://git-scm.com
@@ -543,8 +541,8 @@ Here's some tips if you've never used VIM before:
 [Chocolatey]: http://chocolatey.org/
 [Breaker-vim package]: https://chocolatey.org/packages/spf13-vim
 [MacVim]:http://code.google.com/p/macvim/
-[Breaker-vim]:https://github.com/spf13/spf13-vim
-[contributors]:https://github.com/spf13/spf13-vim/contributors
+[Breaker-vim]:https://github.com/ibreaker/vimrc
+[contributors]:https://github.com/ibreaker/vimrc/contributors
 
 [Vundle]:https://github.com/gmarik/vundle
 [PIV]:https://github.com/spf13/PIV
@@ -576,3 +574,4 @@ Here's some tips if you've never used VIM before:
 [nerdtree-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/NERD-Tree.png
 [easymotion-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/easymotion.png
 [airline-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/airline.png
+[NERD-Tree]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/NERD-Tree.png
