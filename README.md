@@ -27,7 +27,7 @@ It is a good starting point for anyone intending to use VIM for development runn
 
 The distribution is completely customisable using a `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local` Vim RC files.
 
-![spf13-vim image][spf13-vim-img]
+![Breaker-vim image][Breaker-vim-img]
 
 Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, Breaker-vim uses the [Vundle] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vundle also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
 
@@ -144,7 +144,7 @@ I'm always happy to take pull requests from others. A good number of people are 
 
 # A highly optimized .vimrc config file
 
-![spf13-vimrc image][spf13-vimrc-img]
+![Breaker-vimrc image][Breaker-vimrc-img]
 
 The .vimrc file is suited to programming. It is extremely well organized and folds in sections.
 Each section is labeled and each option is commented.
@@ -181,9 +181,9 @@ that get loaded *before* the breaker-vim `.vimrc`.
 
 For example, to prevent autocd into a file directory:
 ```bash
-    echo let g:spf13_no_autochdir = 1 >> ~/.vimrc.before.local
+    echo let g:breaker_no_autochdir = 1 >> ~/.vimrc.before.local
 ```
-For a list of available spf13-vim specific customization options, look at the `~/.vimrc.before` file.
+For a list of available breaker-vim specific customization options, look at the `~/.vimrc.before` file.
 
 
 ### Fork Customization
@@ -209,7 +209,7 @@ needs to be set in your `.vimrc.bundles.fork` file.
 You can specify the default bundles for your fork using `.vimrc.before.fork` file. Here is how to create an example `.vimrc.before.fork` file
 in a fork repo for the default bundles.
 ```bash
-    echo let g:spf13_bundle_groups=[\'general\', \'programming\', \'misc\', \'youcompleteme\'] >> .vimrc.before.fork
+    echo let g:breaker_bundle_groups=[\'general\', \'programming\', \'misc\', \'youcompleteme\'] >> .vimrc.before.fork
 ```
 Once you have this file in your repo, only the bundles you specified will be installed during the first installation of your fork.
 
@@ -227,8 +227,8 @@ configuration and make customizations.
 
 These two mappings can themselves be customized by setting the following in .vimrc.before.local:
 ```bash
-let g:spf13_edit_config_mapping='<Leader>ev'
-let g:spf13_apply_config_mapping='<Leader>sv'
+let g:breaker_edit_config_mapping='<Leader>ev'
+let g:breaker_apply_config_mapping='<Leader>sv'
 ```
 
 # Plugins
@@ -347,7 +347,7 @@ Neocomplete is an amazing autocomplete plugin with additional support for snippe
 
 YouCompleteMe is another amazing completion engine. It is slightly more involved to set up as it contains a binary component that the user needs to compile before it will work. As a result of this however it is very fast.
 
-To enable YouCompleteMe add `youcompleteme` to your list of groups by overriding it in your `.vimrc.before.local` like so: `let g:spf13_bundle_groups=['general', 'programming', 'misc', 'scala', 'youcompleteme']` This is just an example. Remember to choose the other groups you want here.
+To enable YouCompleteMe add `youcompleteme` to your list of groups by overriding it in your `.vimrc.before.local` like so: `let g:breaker_bundle_groups=['general', 'programming', 'misc', 'scala', 'youcompleteme']` This is just an example. Remember to choose the other groups you want here.
 
 Once you have done this you will need to get Vundle to grab the latest code from git. You can do this by calling `:BundleInstall!`. You should see YouCompleteMe in the list.
 
@@ -436,11 +436,11 @@ Tabularize lets you align statements on their equal signs and other characters
 
 ## [Tagbar]
 
-spf13-vim includes the Tagbar plugin. This plugin requires exuberant-ctags and will automatically generate tags for your open files. It also provides a panel to navigate easily via tags
+Breaker-vim includes the Tagbar plugin. This plugin requires exuberant-ctags and will automatically generate tags for your open files. It also provides a panel to navigate easily via tags
 
 **QuickStart** `CTRL-]` while the cursor is on a keyword (such as a function name) to jump to its definition.
 
-**Customizations**: spf13-vim binds `<Leader>tt` to toggle the tagbar panel
+**Customizations**: Breaker-vim binds `<Leader>tt` to toggle the tagbar panel
 
 ![tagbar image][tagbar-img]
 
@@ -542,9 +542,9 @@ Here's some tips if you've never used VIM before:
 [Vim]:http://www.vim.org/download.php#pc
 [msysgit]:http://msysgit.github.io
 [Chocolatey]: http://chocolatey.org/
-[spf13-vim package]: https://chocolatey.org/packages/spf13-vim
+[Breaker-vim package]: https://chocolatey.org/packages/spf13-vim
 [MacVim]:http://code.google.com/p/macvim/
-[spf13-vim]:https://github.com/spf13/spf13-vim
+[Breaker-vim]:https://github.com/spf13/spf13-vim
 [contributors]:https://github.com/spf13/spf13-vim/contributors
 
 [Vundle]:https://github.com/gmarik/vundle
@@ -570,8 +570,8 @@ Here's some tips if you've never used VIM before:
 [AutoClose]:https://github.com/spf13/vim-autoclose
 [Ack.vim]:https://github.com/mileszs/ack.vim
 
-[spf13-vim-img]:https://i.imgur.com/UKToY.png
-[spf13-vimrc-img]:https://i.imgur.com/kZWj1.png
+[Breaker-vim-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/breaker-vim.png
+[Breaker-vimrc-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/breaker-vimrc.png
 [autocomplete-img]:https://i.imgur.com/90Gg7.png
 [tagbar-img]:https://i.imgur.com/cjbrC.png
 [fugitive-img]:https://i.imgur.com/4NrxV.png
