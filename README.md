@@ -571,11 +571,9 @@ Here's some tips if you've never used VIM before:
 [Ack.vim]:https://github.com/mileszs/ack.vim
 
 [Breaker-vim-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/breaker-vim.png
-[Breaker-vimrc-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/breaker-vimrc.png
-[autocomplete-img]:https://i.imgur.com/90Gg7.png
-[tagbar-img]:https://i.imgur.com/cjbrC.png
-[fugitive-img]:https://i.imgur.com/4NrxV.png
-[nerdtree-img]:https://i.imgur.com/9xIfu.png
-[phpmanual-img]:https://i.imgur.com/c0GGP.png
-[easymotion-img]:https://i.imgur.com/ZsrVL.png
-[airline-img]:https://i.imgur.com/D4ZYADr.png
+[Breaker-vimrc-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/breaker-vimrc-.png
+[autocomplete-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/autocomplete.png
+[tagbar-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/tagbar.png
+[nerdtree-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/NERD-Tree.png
+[easymotion-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/easymotion.png
+[airline-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/airline.png
