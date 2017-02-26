@@ -16,12 +16,12 @@ REM    limitations under the License.
 @if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%
 @if not exist "%HOME%" @set HOME=%USERPROFILE%
 
-@set APP_PATH=%HOME%\.spf13-vim-3
+@set APP_PATH=%HOME%\.breaker-vim
 IF NOT EXIST "%APP_PATH%" (
-    call git clone -b 3.0 https://github.com/spf13/spf13-vim.git "%APP_PATH%"
+    call git clone -b 3.0 https://github.com/ibreaker/vimrc.git "%APP_PATH%"
 ) ELSE (
     @set ORIGINAL_DIR=%CD%
-    echo updating spf13-vim
+    echo updating breaker-vim
     chdir /d "%APP_PATH%"
     call git pull
     chdir /d "%ORIGINAL_DIR%"
