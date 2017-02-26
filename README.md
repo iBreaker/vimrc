@@ -216,7 +216,6 @@ Once you have this file in your repo, only the bundles you specified will be ins
 You may also want to update your `README.markdown` file so that the `bootstrap.sh` link points to your repository and your `bootstrap.sh`
 file to pull down your fork.
 
-For an example of a fork of Breaker-vim that provides customization in this manner see [taxilian's fork](https://github.com/taxilian/spf13-vim).
 
 ### Easily Editing Your Configuration
 
