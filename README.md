@@ -571,7 +571,7 @@ Here's some tips if you've never used VIM before:
 [Ack.vim]:https://github.com/mileszs/ack.vim
 
 [Breaker-vim-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/breaker-vim.png
-[Breaker-vimrc-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/breaker-vimrc-.png
+[Breaker-vimrc-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/brealer-vimrc-.png
 [autocomplete-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/autocomplete.png
 [tagbar-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/tagbar.png
 [nerdtree-img]:http://olym8wvh0.bkt.clouddn.com/breaker-vim/NERD-Tree.png
