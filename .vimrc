@@ -105,7 +105,6 @@
             set background=dark
         endif
     endfunction
-    noremap <leader>bg :call ToggleBG()<CR>
 
     " if !has('gui')
         "set term=$TERM          " Make arrow and other keys work
@@ -124,6 +123,14 @@
         endif
     endif
 
+    function! SwitchMouse()
+        if &mouse == 'a'
+            set mouse-=a
+        else
+            set mouse=a
+        endif
+    endfunction
+    map <F10> :call SwitchMouse()<CR>
     " Most prefer to automatically switch to the current file directory when
     " a new buffer is opened; to prevent this behavior, add the following to
     " your .vimrc.before.local file:
@@ -287,7 +294,7 @@
     " character) add the following to your .vimrc.before.local file:
     "   let g:spf13_leader='\'
     if !exists('g:spf13_leader')
-        let mapleader = ','
+        let mapleader = ';'
     else
         let mapleader=g:spf13_leader
     endif
@@ -297,6 +304,7 @@
         let maplocalleader=g:spf13_localleader
     endif
 
+    noremap <leader>bg :call ToggleBG()<CR>
     " The default mappings for editing and applying the spf13 configuration
     " are <leader>ev and <leader>sv respectively. Change them to your preference
     " by adding the following to your .vimrc.before.local file:
