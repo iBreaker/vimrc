@@ -21,6 +21,8 @@
 
 </pre>
 
+[Enginsh README]
+
 Breaker-vim 是一个集成了多种插件的vim配置，支持vim，Gvim和[MacVim]
 breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包括 Linux, \*nix and Mac.
 本配置文件有强大的自定义功能，用户可以添加自己的配置到  `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local`.
@@ -464,6 +466,8 @@ Here's some tips if you've never used VIM before:
 * Keyboard [cheat sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif).
 
 
+[Enginsh README]:README.en.md
+[中文 README]:README.en.md
 
 [Git]:http://git-scm.com
 [Curl]:http://curl.haxx.se
