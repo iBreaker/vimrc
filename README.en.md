@@ -21,6 +21,8 @@
 
 </pre>
 
+[中文 README]
+
 Breaker's vimrc is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
 
 It is a good starting point for anyone intending to use VIM for development running equally well on Linux, \*nix and Mac.
@@ -468,6 +470,8 @@ Here's some tips if you've never used VIM before:
 * Keyboard [cheat sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif).
 
 
+[Enginsh README]:README.en.md
+[中文 README]:README.en.md
 
 [Git]:http://git-scm.com
 [Curl]:http://curl.haxx.se
