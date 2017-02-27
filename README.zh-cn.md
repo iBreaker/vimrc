@@ -22,7 +22,7 @@
 </pre>
 
 Breaker-vim 是一个集成了多种插件的vim配置，支持vim，Gvim和[MacVim]
-breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包括 Windows, Linux, \*nix and Mac.
+breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包括 Linux, \*nix and Mac.
 本配置文件有强大的自定义功能，用户可以添加自己的配置到  `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local`.
 
 ![Breaker-vim image][Breaker-vim-img]
@@ -31,11 +31,13 @@ breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包�
 
 # 安装
 ## 需求
-[neocomplete](https://github.com/Shougo/neocomplete.vim)插件需要[vim支持lua](https://github.com/Shougo/neocomplete.vim#requirements).你肯能需要重新编译vim让其支持lua，因为默认vim不支持lua的。
+[neocomplete](https://github.com/Shougo/neocomplete.vim)插件需要[vim支持lua](https://github.com/Shougo/neocomplete.vim#requirements).
+你可能需要重新编译vim让其支持lua，因为默认vim不支持lua。
 
 ## Linux, \*nix, Mac OSX 安装
 
-最简单的安装方式是使用[automatic installer脚本安装](https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh).拷贝和粘贴并执行下面的命令. 安装器会首先备份你vim之前的配置，当你已经安装过breaker-vim，并不会备份，只会生机插件以及配置到最新版本。
+最简单的安装方式是使用[安装器](https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh)安装.拷贝和粘贴并执行下面的命令. 
+安装器会首先备份你vim之前的配置，当你已经安装过breaker-vim，并不会备份，只会升级插件以及配置到最新版本。
 
 * 要求安装 Git 1.7+ 和 Vim 7.3+*
 
@@ -50,22 +52,9 @@ breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包�
     sh <(curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L)
 ```
 
-## Windows安装
+### 安装依赖
 
-Windows上 \*nix [Git]和[Curl]也必须提前安装完成. 如果没有安装vim,你也需要安装[Vim].最简单的安装这三个工具的方式是 ([Git], [Curl], [Vim] and [Breaker-vim])是通过 [Chocolatey] NuGet.
-安装完[Chocolatey]后执行下面的命令：
-
-```bash  
-C:\> choco install Breaker-vim
-``````
-
-_Note: The [Breaker-vim package] will install Vim also!_
-
-If you want to install [msysgit], [Curl] and [Breaker-vim] individually, follow the directions below.
-
-### Installing dependencies
-
-#### Install [Vim]
+#### 安装 [Vim]
 
 After the installation of Vim you must add a new directory to your environment variables path to make it work with the script installation of Breaker.
 
