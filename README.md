@@ -21,43 +21,39 @@
 
 </pre>
 
-Breaker's vimrc is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
-
-It is a good starting point for anyone intending to use VIM for development running equally well on Linux, \*nix and Mac.
-
-The distribution is completely customisable using a `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local` Vim RC files.
+Breaker-vim 是一个集成了多种插件的vim配置，支持vim，Gvim和[MacVim]
+breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包括 Linux, \*nix and Mac.
+本配置文件有强大的自定义功能，用户可以添加自己的配置到  `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local`.
 
 ![Breaker-vim image][Breaker-vim-img]
 
-Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, Breaker-vim uses the [Vundle] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vundle also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
+与传统的vim插件文件结构不通，breaker-vim使用Vimdle插件管理vim插件，这样更有利于vim插件的增加、删除和更新
 
-Great care has been taken to ensure that each plugin plays nicely with others, and optional configuration has been provided for what we believe is the most efficient use.
+# 安装
+## 需求
+[neocomplete](https://github.com/Shougo/neocomplete.vim)插件需要[vim支持lua](https://github.com/Shougo/neocomplete.vim#requirements).
+你可能需要重新编译vim让其支持lua，因为默认vim不支持lua。
 
-Lastly (and perhaps, most importantly) It is completely cross platform. It works well on Linux and OSX without any modifications or additional configurations. If you are using [MacVim] or Gvim additional features are enabled. So regardless of your environment just clone and run.
+## Linux, \*nix, Mac OSX 安装
 
-# Installation
-## Requirements
-To make all the plugins work, specifically [neocomplete](https://github.com/Shougo/neocomplete.vim), you need [vim with lua](https://github.com/Shougo/neocomplete.vim#requirements).
+最简单的安装方式是使用[安装器](https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh)安装.拷贝和粘贴并执行下面的命令. 
+安装器会首先备份你vim之前的配置，当你已经安装过breaker-vim，并不会备份，只会升级插件以及配置到最新版本。
 
-## Linux, \*nix, Mac OSX Installation
-
-The easiest way to install Breaker-vim is to use our [automatic installer](https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh) by simply copying and pasting the following line into a terminal. This will install Breaker-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
-
-*Requires Git 1.7+ and Vim 7.3+*
+* 要求安装 Git 1.7+ 和 Vim 7.3+*
 
 ```bash
 
     curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L > breaker-vim.sh && sh breaker-vim.sh
 ```
 
-If you have a bash-compatible shell you can run the script directly:
+或者:
 ```bash
 
     sh <(curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L)
 ```
 
-## Updating to the latest version
-The simpliest (and safest) way to update is to simply rerun the installer. It will completely and non destructively upgrade to the latest version.
+## 升级到最新版本
+升级插件和配置最简单和最安全的方式就是使用安装器。使用以下命令:
 
 ```bash
 
@@ -65,7 +61,7 @@ The simpliest (and safest) way to update is to simply rerun the installer. It wi
 
 ```
 
-Alternatively you can manually perform the following steps. If anything has changed with the structure of the configuration you will need to create the appropriate symlinks.
+或者你可以手动指向下面的命令，如果文件结构有所改变，你需要创建相应的符号链接。
 
 ```bash
     cd $HOME/to/breaker-vim/
@@ -75,9 +71,9 @@ Alternatively you can manually perform the following steps. If anything has chan
 
 ### Fork me on GitHub
 
-I'm always happy to take pull requests from others. A good number of people are already [contributors] to [Breaker-vim]. Go ahead and fork me.
+很乐意接收PRs。现在已经有很多人为[Breaker-vim]贡献代码，请fork项目。
 
-# A highly optimized .vimrc config file
+# 一个高度可配置的.vim coding项目
 
 ![Breaker-vimrc image][Breaker-vimrc-img]
 
