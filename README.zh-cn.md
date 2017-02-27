@@ -35,27 +35,29 @@ breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包�
 
 ## Linux, \*nix, Mac OSX 安装
 
-The easiest way to install Breaker-vim is to use our [automatic installer](https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh) by simply copying and pasting the following line into a terminal. This will install Breaker-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
+最简单的安装方式是使用[automatic installer脚本安装](https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh).拷贝和粘贴并执行下面的命令. 安装器会首先备份你vim之前的配置，当你已经安装过breaker-vim，并不会备份，只会生机插件以及配置到最新版本。
 
-*Requires Git 1.7+ and Vim 7.3+*
+* 要求安装 Git 1.7+ 和 Vim 7.3+*
 
 ```bash
 
     curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L > breaker-vim.sh && sh breaker-vim.sh
 ```
 
-If you have a bash-compatible shell you can run the script directly:
+或者:
 ```bash
 
     sh <(curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L)
 ```
 
-## Installing on Windows
+## Windows安装
 
-On Windows and \*nix [Git] and [Curl] are required. Also, if you haven't done so already, you'll need to install [Vim].
-The quickest option to install all three dependencies ([Git], [Curl], [Vim] and [Breaker]) is via [Chocolatey] NuGet. After installing [Chocolatey], execute the following commands on the _command prompt_:
+Windows上 \*nix [Git]和[Curl]也必须提前安装完成. 如果没有安装vim,你也需要安装[Vim].最简单的安装这三个工具的方式是 ([Git], [Curl], [Vim] and [Breaker-vim])是通过 [Chocolatey] NuGet.
+安装完[Chocolatey]后执行下面的命令：
 
-    C:\> choco install Breaker-vim
+```bash  
+C:\> choco install Breaker-vim
+``````
 
 _Note: The [Breaker-vim package] will install Vim also!_
 
