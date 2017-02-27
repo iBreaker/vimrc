@@ -21,11 +21,11 @@
 
 </pre>
 
-Breaker-vimrc是一个集成了多种插件的vim配置，支持vim，Gvim和MacVIm
+Breaker-vim 是一个集成了多种插件的vim配置，支持vim，Gvim和[MacVim]
 
-It is a good starting point for anyone intending to use VIM for development running equally well on Windows, Linux, \*nix and Mac.
+breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包括 Windows, Linux, \*nix and Mac.
 
-The distribution is completely customisable using a `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local` Vim RC files.
+本配置文件有强大的自定义功能，用户可以添加自己的配置到  `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local`.
 
 ![Breaker-vim image][Breaker-vim-img]
 
