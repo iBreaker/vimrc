@@ -61,7 +61,6 @@ breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包�
 
 ```
 
-Alternatively you can manually perform the following steps. If anything has changed with the structure of the configuration you will need to create the appropriate symlinks.
 或者你可以手动指向下面的命令，如果文件结构有所改变，你需要创建相应的符号链接。
 
 ```bash
@@ -72,7 +71,6 @@ Alternatively you can manually perform the following steps. If anything has chan
 
 ### Fork me on GitHub
 
-I'm always happy to take pull requests from others. A good number of people are already [contributors] to [Breaker-vim]. Go ahead and fork me.
 很乐意接收PRs。现在已经有很多人为[Breaker-vim]贡献代码，请fork项目。
 
 # A highly optimized .vimrc config file

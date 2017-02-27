@@ -23,7 +23,7 @@
 
 Breaker's vimrc is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
 
-It is a good starting point for anyone intending to use VIM for development running equally well on Windows, Linux, \*nix and Mac.
+It is a good starting point for anyone intending to use VIM for development running equally well on Linux, \*nix and Mac.
 
 The distribution is completely customisable using a `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local` Vim RC files.
 
@@ -33,7 +33,7 @@ Unlike traditional VIM plugin structure, which similar to UNIX throws all files 
 
 Great care has been taken to ensure that each plugin plays nicely with others, and optional configuration has been provided for what we believe is the most efficient use.
 
-Lastly (and perhaps, most importantly) It is completely cross platform. It works well on Windows, Linux and OSX without any modifications or additional configurations. If you are using [MacVim] or Gvim additional features are enabled. So regardless of your environment just clone and run.
+Lastly (and perhaps, most importantly) It is completely cross platform. It works well on Linux and OSX without any modifications or additional configurations. If you are using [MacVim] or Gvim additional features are enabled. So regardless of your environment just clone and run.
 
 # Installation
 ## Requirements
@@ -55,71 +55,6 @@ If you have a bash-compatible shell you can run the script directly:
 
     sh <(curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L)
 ```
-
-## Installing on Windows
-
-On Windows and \*nix [Git] and [Curl] are required. Also, if you haven't done so already, you'll need to install [Vim].
-The quickest option to install all three dependencies ([Git], [Curl], [Vim] and [Breaker]) is via [Chocolatey] NuGet. After installing [Chocolatey], execute the following commands on the _command prompt_:
-
-    C:\> choco install Breaker-vim
-
-_Note: The [Breaker-vim package] will install Vim also!_
-
-If you want to install [msysgit], [Curl] and [Breaker-vim] individually, follow the directions below.
-
-### Installing dependencies
-
-#### Install [Vim]
-
-After the installation of Vim you must add a new directory to your environment variables path to make it work with the script installation of Breaker.
-
-Open Vim and write the following command, it will show the installed directory:
-
-    :echo $VIMRUNTIME
-    C:\Program Files (X86)\Vim\vim74
-
-Then you need to add it to your environment variable path. After that try execute `vim` within command prompt (press Win-R, type `cmd`, press Enter) and you’ll see the default vim page.
-
-#### Install [msysgit]
-
-After installation try running `git --version` within _command prompt_ (press Win-R,  type `cmd`, press Enter) to make sure all good:
-
-    C:\> git --version
-    git version 1.7.4.msysgit.0
-
-#### Setup [Curl]
-_Instructions blatently copied from vundle readme_
-Installing Curl on Windows is easy as [Curl] is bundled with [msysgit]!
-But before it can be used with [Vundle] it's required make `curl` run in _command prompt_.
-The easiest way is to create `curl.cmd` with [this content](https://gist.github.com/912993)
-
-    @rem Do not use "echo off" to not affect any child calls.
-    @setlocal
-
-    @rem Get the abolute path to the parent directory, which is assumed to be the
-    @rem Git installation root.
-    @for /F "delims=" %%I in ("%~dp0..") do @set git_install_root=%%~fI
-    @set PATH=%git_install_root%\bin;%git_install_root%\mingw\bin;%PATH%
-
-    @if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%
-    @if not exist "%HOME%" @set HOME=%USERPROFILE%
-
-    @curl.exe %*
-
-
-And copy it to `C:\Program Files\Git\cmd\curl.cmd`, assuming [msysgit] was installed to `c:\Program Files\Git`
-
-to verify all good, run:
-
-    C:\> curl --version
-    curl 7.21.1 (i686-pc-mingw32) libcurl/7.21.1 OpenSSL/0.9.8k zlib/1.2.3
-    Protocols: dict file ftp ftps http https imap imaps ldap ldaps pop3 pop3s rtsp smtp smtps telnet tftp
-    Features: Largefile NTLM SSL SSPI libz
-
-
-#### Installing Breaekr-vim on Windows
-
-The easiest way is to download and run the Breaker-vim-windows-install.cmd file. Remember to run this file in **Administrator Mode** if you want the symlinks to be created successfully.
 
 ## Updating to the latest version
 The simpliest (and safest) way to update is to simply rerun the installer. It will completely and non destructively upgrade to the latest version.
