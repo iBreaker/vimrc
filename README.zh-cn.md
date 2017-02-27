@@ -73,7 +73,7 @@ breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包�
 
 很乐意接收PRs。现在已经有很多人为[Breaker-vim]贡献代码，请fork项目。
 
-# A highly optimized .vimrc config file
+# 一个高度可配置的.vim coding项目
 
 ![Breaker-vimrc image][Breaker-vimrc-img]
 
