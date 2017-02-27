@@ -52,8 +52,8 @@ breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包�
     sh <(curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L)
 ```
 
-## Updating to the latest version
-The simpliest (and safest) way to update is to simply rerun the installer. It will completely and non destructively upgrade to the latest version.
+## 升级到最新版本
+升级插件和配置最简单和最安全的方式就是使用安装器。使用以下命令:
 
 ```bash
 
@@ -62,6 +62,7 @@ The simpliest (and safest) way to update is to simply rerun the installer. It wi
 ```
 
 Alternatively you can manually perform the following steps. If anything has changed with the structure of the configuration you will need to create the appropriate symlinks.
+或者你可以手动指向下面的命令，如果文件结构有所改变，你需要创建相应的符号链接。
 
 ```bash
     cd $HOME/to/breaker-vim/
@@ -72,6 +73,7 @@ Alternatively you can manually perform the following steps. If anything has chan
 ### Fork me on GitHub
 
 I'm always happy to take pull requests from others. A good number of people are already [contributors] to [Breaker-vim]. Go ahead and fork me.
+很乐意接收PRs。现在已经有很多人为[Breaker-vim]贡献代码，请fork项目。
 
 # A highly optimized .vimrc config file
 
