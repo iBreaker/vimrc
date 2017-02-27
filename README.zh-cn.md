@@ -52,60 +52,6 @@ breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包�
     sh <(curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L)
 ```
 
-### 安装依赖
-
-#### 安装 [Vim]
-
-After the installation of Vim you must add a new directory to your environment variables path to make it work with the script installation of Breaker.
-
-Open Vim and write the following command, it will show the installed directory:
-
-    :echo $VIMRUNTIME
-    C:\Program Files (X86)\Vim\vim74
-
-Then you need to add it to your environment variable path. After that try execute `vim` within command prompt (press Win-R, type `cmd`, press Enter) and you’ll see the default vim page.
-
-#### Install [msysgit]
-
-After installation try running `git --version` within _command prompt_ (press Win-R,  type `cmd`, press Enter) to make sure all good:
-
-    C:\> git --version
-    git version 1.7.4.msysgit.0
-
-#### Setup [Curl]
-_Instructions blatently copied from vundle readme_
-Installing Curl on Windows is easy as [Curl] is bundled with [msysgit]!
-But before it can be used with [Vundle] it's required make `curl` run in _command prompt_.
-The easiest way is to create `curl.cmd` with [this content](https://gist.github.com/912993)
-
-    @rem Do not use "echo off" to not affect any child calls.
-    @setlocal
-
-    @rem Get the abolute path to the parent directory, which is assumed to be the
-    @rem Git installation root.
-    @for /F "delims=" %%I in ("%~dp0..") do @set git_install_root=%%~fI
-    @set PATH=%git_install_root%\bin;%git_install_root%\mingw\bin;%PATH%
-
-    @if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%
-    @if not exist "%HOME%" @set HOME=%USERPROFILE%
-
-    @curl.exe %*
-
-
-And copy it to `C:\Program Files\Git\cmd\curl.cmd`, assuming [msysgit] was installed to `c:\Program Files\Git`
-
-to verify all good, run:
-
-    C:\> curl --version
-    curl 7.21.1 (i686-pc-mingw32) libcurl/7.21.1 OpenSSL/0.9.8k zlib/1.2.3
-    Protocols: dict file ftp ftps http https imap imaps ldap ldaps pop3 pop3s rtsp smtp smtps telnet tftp
-    Features: Largefile NTLM SSL SSPI libz
-
-
-#### Installing Breaekr-vim on Windows
-
-The easiest way is to download and run the Breaker-vim-windows-install.cmd file. Remember to run this file in **Administrator Mode** if you want the symlinks to be created successfully.
-
 ## Updating to the latest version
 The simpliest (and safest) way to update is to simply rerun the installer. It will completely and non destructively upgrade to the latest version.
 
