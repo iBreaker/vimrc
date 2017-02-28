@@ -122,13 +122,19 @@
         endif
     endif
 
+
     function! SwitchMouse()
         if &mouse == 'a'
             set mouse-=a
-        else
+            set nonu 
+            echo "please copy manual"
+        else 
             set mouse=a
+            set nu
+            echo ""
         endif
     endfunction
+
     map <F10> :call SwitchMouse()<CR>
     " Most prefer to automatically switch to the current file directory when
     " a new buffer is opened; to prevent this behavior, add the following to
