@@ -1293,4 +1293,5 @@
             source ~/.gvimrc.local
         endif
     endif
-" }
+    " }
+    set foldlevel=20 " 折叠默认关闭
