@@ -38,20 +38,20 @@ breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包�
 
 ## Linux, \*nix, Mac OSX 安装
 
-最简单的安装方式是使用[安装器](https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh)安装.拷贝和粘贴并执行下面的命令. 
+最简单的安装方式是使用[安装器](https://coding.net/u/breaker/p/vimrc/git/raw/dev/bootstrap.sh)安装.拷贝和粘贴并执行下面的命令. 
 安装器会首先备份你vim之前的配置，当你已经安装过breaker-vim，并不会备份，只会升级插件以及配置到最新版本。
 
 * 要求安装 Git 1.7+ 和 Vim 7.3+*
 
 ```bash
 
-    curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L > breaker-vim.sh && sh breaker-vim.sh
+    curl https://coding.net/u/breaker/p/vimrc/git/raw/dev/bootstrap.sh -L > breaker-vim.sh && sh breaker-vim.sh
 ```
 
 或者:
 ```bash
 
-    sh <(curl https://coding.net/u/breaker/p/vimrc/git/raw/master/bootstrap.sh -L)
+    sh <(curl https://coding.net/u/breaker/p/vimrc/git/raw/dev/bootstrap.sh -L)
 ```
 
 ## 升级到最新版本
@@ -59,7 +59,7 @@ breaker-vim 适合作为一个IDE。并且在各种平台上运行良好，包�
 
 ```bash
 
-    curl https://raw.githubusercontent.com/ibreaker/vimrc/master/bootstrap.sh -L -o - | sh
+    curl https://raw.githubusercontent.com/ibreaker/vimrc/dev/bootstrap.sh -L -o - | sh
 
 ```
 
