@@ -127,11 +127,9 @@
         if &mouse == 'a'
             set mouse-=a
             set nonu 
-            set norelativenumber
             echo "please copy manual"
         else 
             set mouse=a
-            set relativenumber
             set nu
             echo ""
         endif
@@ -257,10 +255,10 @@
     set scrolljump=5                " Lines to scroll when cursor leaves screen
     set scrolloff=3                 " Minimum lines to keep above and below cursor
     set foldenable                  " Auto fold code
-    "set list
-    "set listchars=tab:\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+    set nolist
+    set listchars=tab:.\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
-    " }
+" }
 
 " Formatting {
 
