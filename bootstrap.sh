@@ -152,17 +152,6 @@ setup_fork_mode() {
     local target_path="$3"
 
     if [ "$1" -eq '1' ]; then
-        touch "$target_path/.vimrc.fork"
-        touch "$target_path/.vimrc.bundles.fork"
-        touch "$target_path/.vimrc.before.fork"
-
-        lnif "$source_path/.vimrc.fork"         "$target_path/.vimrc.fork"
-        lnif "$source_path/.vimrc.bundles.fork" "$target_path/.vimrc.bundles.fork"
-        lnif "$source_path/.vimrc.before.fork"  "$target_path/.vimrc.before.fork"
-
-        ret="$?"
-        success "Created fork maintainer files."
-        debug
     fi
 }
 
