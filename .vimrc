@@ -78,8 +78,6 @@
 
 " }
 
-" }
-
 " Use bundles config {
     if filereadable(expand("~/.vimrc.bundles"))
         source ~/.vimrc.bundles
@@ -484,7 +482,6 @@
 " Plugins {
 
     " GoLang {
-        if count(g:breaker_bundle_groups, 'go')
             let g:go_highlight_functions = 1
             let g:go_highlight_methods = 1
             let g:go_highlight_structs = 1
@@ -502,38 +499,27 @@
             au FileType go nmap <Leader>gd <Plug>(go-doc)
             au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
             au FileType go nmap <leader>co <Plug>(go-coverage)
-        endif
         " }
 
 
     " TextObj Sentence {
-        if count(g:breaker_bundle_groups, 'writing')
             augroup textobj_sentence
               autocmd!
               autocmd FileType markdown call textobj#sentence#init()
               autocmd FileType textile call textobj#sentence#init()
               autocmd FileType text call textobj#sentence#init()
             augroup END
-        endif
     " }
 
     " TextObj Quote {
-        if count(g:breaker_bundle_groups, 'writing')
             augroup textobj_quote
                 autocmd!
                 autocmd FileType markdown call textobj#quote#init()
                 autocmd FileType textile call textobj#quote#init()
                 autocmd FileType text call textobj#quote#init({'educate': 0})
             augroup END
-        endif
     " }
 
-    " PIV {
-        if isdirectory(expand("~/.vim/bundle/PIV"))
-            let g:DisableAutoPHPFolding = 0
-            let g:PIVAutoClose = 0
-        endif
-    " }
 
     " Misc {
         if isdirectory(expand("~/.vim/bundle/nerdtree"))
