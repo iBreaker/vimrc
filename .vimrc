@@ -78,10 +78,6 @@
 
 " }
 
-" Use before config if available {
-    if filereadable(expand("~/.vimrc.before"))
-        source ~/.vimrc.before
-    endif
 " }
 
 " Use bundles config {
