@@ -1314,3 +1314,11 @@
     endif
     " }
     set foldlevel=20 " 折叠默认关闭
+    
+    
+    if exists('g:breaker_nop_dir')
+        noremap <Up> <Nop>
+        noremap <Down> <Nop>
+        noremap <Left> <Nop>
+        noremap <Right> <Nop>
+    endif
