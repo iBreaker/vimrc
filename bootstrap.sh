@@ -140,20 +140,13 @@ create_symlinks() {
     fi
 
     touch  "$target_path/.vimrc.local"
-    touch  "$source_path/.breaker-vim-installed"
+    touch  "$target_path/.breaker-vim-installed"
 
     ret="$?"
     success "Setting up vim symlinks."
     debug
 }
 
-setup_fork_mode() {
-    local source_path="$2"
-    local target_path="$3"
-
-    if [ "$1" -eq '1' ]; then
-    fi
-}
 
 setup_vundle() {
     local system_shell="$SHELL"
@@ -187,10 +180,6 @@ sync_repo       "$APP_PATH" \
                 "$app_name"
 
 create_symlinks "$APP_PATH" \
-                "$HOME"
-
-setup_fork_mode "$fork_maintainer" \
-                "$APP_PATH" \
                 "$HOME"
 
 sync_repo       "$HOME/.vim/bundle/vundle" \
