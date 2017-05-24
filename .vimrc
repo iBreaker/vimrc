@@ -258,7 +258,7 @@
 
 " Formatting {
 
-    set wrap                      " Do not wrap long lines
+    set wrap                      " wrap long lines
     set autoindent                  " Indent at the same level of the previous line
     set shiftwidth=4                " Use indents of 4 spaces
     set expandtab                   " Tabs are spaces, not tabs
