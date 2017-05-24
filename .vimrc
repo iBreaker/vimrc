@@ -600,6 +600,25 @@
         endif
     " }
 
+    "{
+        if isdirectory(expand("~/.vim/bundle/nerdtree-git-plugin/"))
+			let g:NERDTreeShowIgnoredStatus = 1 
+			let g:NERDTreeIndicatorMapCustom = {
+						\ "Modified"  : "✹",
+						\ "Staged"    : "✚",
+						\ "Untracked" : "✭",
+						\ "Renamed"   : "➜",
+						\ "Unmerged"  : "═",
+						\ "Deleted"   : "✖",
+						\ "Dirty"     : "✗",
+						\ "Clean"     : "✔︎",
+						\ 'Ignored'   : '☒',
+						\ "Unknown"   : "?"
+						\ }
+		endif
+    "}
+
+
     " Tabularize {
         if isdirectory(expand("~/.vim/bundle/tabular"))
             nmap <Leader>a& :Tabularize /&<CR>
