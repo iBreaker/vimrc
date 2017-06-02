@@ -618,7 +618,6 @@
 		endif
     "}
 
-
     " Tabularize {
         if isdirectory(expand("~/.vim/bundle/tabular"))
             nmap <Leader>a& :Tabularize /&<CR>
@@ -1068,6 +1067,8 @@
                     \ "*" : ["i'", 'i"', "i)", "i]", "i}", "ip"],
                 \ "html,xml" : ["at"],
                 \ }
+        map <SPACE> <Plug>(wildfire-fuel)
+        vmap <C-SPACE> <Plug>(wildfire-water)
     " }
 
     " vim-airline {
