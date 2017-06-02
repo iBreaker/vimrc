@@ -617,6 +617,7 @@
 						\ }
 		endif
     "}
+    "}
 
     " Tabularize {
         if isdirectory(expand("~/.vim/bundle/tabular"))
@@ -1289,3 +1290,8 @@
         noremap <Left> <Nop>
         noremap <Right> <Nop>
     endif
+
+    map <Tab> :bn<cr>
+    map <leader><Tab> :bp<cr>
+    map <C-d> :bd<cr>
+
