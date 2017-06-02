@@ -179,6 +179,8 @@
             " }
 
     " C/C++{
+    "
+        Bundle 'derekwyatt/vim-fswitch'
         Bundle 'octol/vim-cpp-enhanced-highlight'
         Plugin 'vim-scripts/indexer.tar.gz'
         Plugin 'vim-scripts/DfrankUtil'
@@ -249,7 +251,6 @@
 
     
     " Misc {
-        Bundle 'rust-lang/rust.vim'
         Bundle 'tpope/vim-markdown'
         Bundle 'spf13/vim-preview'
         Bundle 'tpope/vim-cucumber'

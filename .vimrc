@@ -1112,6 +1112,11 @@
     endif
     "}
 
+    "{
+    if isdirectory(expand("~/.vim/bundle/vim-fswitch/"))
+        nmap <silent> <Leader>sw :FSHere<cr>
+    endif
+    "}
 
     " }
 
