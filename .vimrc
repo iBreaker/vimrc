@@ -1055,29 +1055,13 @@
     " }
 
     "" indent_guides {
-        "if isdirectory(expand("~/.vim/bundle/vim-indent-guides/"))
-            "let g:indent_guides_start_level = 2
-            "let g:indent_guides_guide_size = 1
-            "let g:indent_guides_enable_on_vim_startup = 1
-            "let g:indent_guides_auto_colors = 0
-            "echo "OK"
-            "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=1
-            "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=1
-        "endif
+        if isdirectory(expand("~/.vim/bundle/vim-indent-guides/"))
+            let g:indent_guides_start_level = 2
+            let g:indent_guides_guide_size = 1
+            let g:indent_guides_enable_on_vim_startup = 1
+        endif
     "" }
 
-    "indentLine {
-    if isdirectory(expand("~/.vim/bundle/indentLine/"))
-        let g:indentLine_enabled = 1
-        let g:indentLine_char = '¦'
-        "let g:indentLine_first_char = '|'
-        "let g:indentLine_showFirstIndentLevel = 1
-        let g:indentLine_concealcursor = 'niv' " (default 'inc')
-        let g:indentLine_conceallevel = 2  " (default 2)
-        let g:indentLine_leadingSpaceChar = ''
-        noremap <silent> <C-i> :IndentLinesToggle <CR>
-    endif
-    "} 
         
     " Wildfire {
         let g:wildfire_objects = {

@@ -146,7 +146,7 @@
             Bundle 'easymotion/vim-easymotion'
             Bundle 'flazz/vim-colorschemes'
             Bundle 'mbbill/undotree'
-            Bundle 'Yggdroot/indentLine'
+            Bundle 'nathanaelkane/vim-indent-guides'
             if !exists('g:breaker_no_views')
                 Bundle 'vim-scripts/restore_view.vim'
             endif
